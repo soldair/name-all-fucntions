@@ -6,7 +6,9 @@ else if(process.argv.indexOf('name') > -1)
   require('../index.js')
 else if(process.argv.indexOf('unname') > -1)
   require('../index.js')
+else if (process.argv.indexOf('write') > -1)
+  require('../write.js')
 else {
-  console.error('unknown mode.\n\tname-all-functions [mode]\nvalid modes are\n scan, name, and unname')
+  console.error('unknown mode.\n\tname-all-functions [mode]\nvalid modes are\n scan, name, unname and write')
 } 
 

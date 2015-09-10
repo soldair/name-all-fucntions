@@ -6,6 +6,8 @@ process.stdin.pipe(split()).on('data',function(s){
   var o = json(s)
   if(!o) return;
   fs.writeFileSync(o.file+'.tmp',o.contents)
+  var stat = fs.statSync(o.file)
+  fs.chmodSync(o.file+'.tmp',stat.mode)
   mv(o.file+'.tmp',o.file,function(err){
     if(err) console.error('rename error: ',err)
     console.log(o.file)
