@@ -1,0 +1,23 @@
+{
+  "name": "name-all-functions",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test/*.js"
+  },
+  "author": "Ryan Day <soldair@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "graceful-fs": "^4.1.2",
+    "mv": "^2.1.1",
+    "split": "^1.0.0",
+    "walkdir": "0.0.10"
+  },
+  "bin": {
+    "name-all-functions": "./bin/index.js"
+  },
+  "devDependencies": {
+    "tape": "^4.2.0"
+  }
+}
