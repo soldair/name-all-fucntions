@@ -3,7 +3,7 @@ var fs = require('fs')
 
 var files = []
 
-walkdir(process.argv[3]|| process.cwd()).on('file',function(f){
+walkdir(process.argv[3]|| process.cwd(),{follow_symlinks:true}).on('file',function(f){
 
   if(f.lastIndexOf('.js') !== f.length-3) return
 
